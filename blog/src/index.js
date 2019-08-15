@@ -1,0 +1,17 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+//redux imoports
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducers from './components/reducers/index'
+
+
+
+ReactDOM.render(
+<Provider store={createStore(reducers)}>
+<App />
+</Provider>,
+document.getElementById('root'));
+
