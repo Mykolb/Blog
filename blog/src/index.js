@@ -4,13 +4,14 @@ import './index.css';
 import App from './App';
 //redux imoports
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import reducers from './components/reducers/index'
+import thunk from 'redux-thunk';
 
-
+const store = createStore(reducers, applyMiddleware(thunk))
 
 ReactDOM.render(
-<Provider store={createStore(reducers)}>
+<Provider store={store}>
 <App />
 </Provider>,
 document.getElementById('root'));

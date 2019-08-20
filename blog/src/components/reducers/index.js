@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-
+import postReducer from './postReducer';
 
 
 export default combineReducers({
-    dummyKey: () => 'replace me later'
+    postReducer
 });
